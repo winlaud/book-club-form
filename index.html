@@ -3,16 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Club Form</title>
-    <link href="../form/css/general.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>
 
+<h1>Fairy Tale Book Club</h1>
+<p>To join us, please fill out this form!</p>
+
 	<form>
+    <div>
+        <label for="name">
+        Name
+        <strong class="error">Please fill in your name</strong>
+        </label>
+        <input type="text" id="name" class="input-text input-error" required>
+    </div>
     
+    <div>
+        <label for="email">
+        E-mail address
+		<strong class="error">Please fill in your email address</strong>
+        </label>
+        <input type="email" id="email" class="input-text input-error" maxlength="256">
+    </div>   
     
+    <div>
+        <label for="tel">Phone Number</label>
+        <input type="tel" id="tel" pattern="[0-9]*" class="input-text">
+    </div>
+    
+	<div>
+        <label for="address">Address</label>
+        <input type="text" id="address" class="input-text" required>
+    </div> 
+    
+	<div>
+        <label for="city">City</label>
+        <input type="text" id="city" class="input-text" required>
+    </div>        
+    
+    <div>    
+        <label for="dino">Province</label>
+        <select id="dino" required>
+            <option>Alberta</option>
+            <option>British Columbia</option>
+            <option>Manitoba</option>
+            <option>New Brunswick</option>
+            <option>Newfoundland and Labrador</option>
+            <option>Northwest Territories</option>
+            <option>Nova Scotia</option>
+            <option>Nunavut</option>
+            <option selected>Ontario</option>
+            <option>Prince Edward Island</option>
+            <option>Quebec</option>
+            <option>Saskatchewan</option>
+            <option>Yukon</option>
+        </select>
+    </div>
+    
+	<div>
+        <label for="code">Postal Code</label>
+        <input type="text" id="code" max="7" class="input-text" required>
+    </div>   
+    
+    <div>
+        <label for="meet">What time of day would be best to meet?</label>
+        <input type="time" id="meet" required>
+    </div>
+    
+    <div>
+        <label for="books">How many books have you read this year?</label>
+        <input type="number" min="0" id="books" pattern="[0-9]*">
+    </div>
+    
+     <div>
+    	<label for="fav">Describe your favourite book & author.</label>
+        <textarea id="fav" class="input-text"></textarea>
+    </div>
+    
+     <fieldset>
+    	<legend>How much do you love this genre?</legend>
+        
+        <input type="radio" id="extreme-bad" name="love">
+        <label for="extreme-bad">I hate this genre! Why am I here?</label>
+        
+        <input type="radio" id="bad" name="love">
+        <label for="bad">I don't love it.</label>
+        
+        <input type="radio" id="neutral" name="love">
+        <label for="neutral">It's okay.</label>
+        
+        <input type="radio" id="good" name="love">
+        <label for="good">I love it.</label>
+        
+        <input type="radio" id="extreme-good" name="love">
+        <label for="extreme-good">I love it more than anything else.</label>
+        
+    </fieldset>
     
     </form>
+
+<!--
+	Name (text, required)
+	E-mail address (email, required, maxlength=256)
+	Phone number (tel, optional)
+	Address (text, required)
+	City (text, required)
+	Province (select, required)
+	Postal Code (text, required, maxlength=7)
+	What time of day would be best to meet? (time, required)
+	How many books have you read this year? (number, optional)
+	Describe your favourite book & author (textarea, optional)
+	How much do you love this genre? (group of 5 radio buttons)
+	Choose 2 of the fields and design the error states for them
+It—of course—needs to be responsive
+Validate the from using the W3 validator and TotalValidator
+Test your form with VoiceOver to make sure it’s compatible
+-->
 
 </body>
 </html>
