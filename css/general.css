@@ -52,3 +52,31 @@ button {
 .input-error {
 	border:3px solid #f33;
 }
+
+div {
+	padding-bottom:0.8em;
+}
+
+@media only screen and (min-width: 80em) {
+	html{
+		font-size:120%;
+	}
+}
+
+@media only screen and (min-width: 100em) {
+	html{
+		font-size:150%;
+	}
+}
+
+@media only screen and (min-width: 125em) {
+	html{
+		font-size:175%;
+	}
+}
+
+@media only screen and (min-width: 140em) {
+	html{
+		font-size:210%;
+	}
+}
