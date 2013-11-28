@@ -72,6 +72,10 @@
   .unit-m-3-4 {
     width: 75%;
   }
+  
+  html{
+	background-image:url(../img/cloud2.jpg);
+  }
 }
 @media only screen and (min-width: 60em) {
  .unit-x {
